@@ -32,15 +32,7 @@ function timeColor() {
 
 
 
-
-
-// saveBtn.addEventListener("click", function(){
-    
-//     textArea = localStorage.setItem("save", textArea);
-//     console.log("save")
-
-// })
-
+// enables the color to change due to the current hour
 $(document).ready(function(){
  $(".saveBtn").click(function(){
     var textInput = $(this).siblings(".description").val();
@@ -49,6 +41,7 @@ $(document).ready(function(){
     console.log(this);
 }); 
 })
+// loops through the time blocks and saves the text inside a spacific hour
 for (i = 9; i < 18; i++) {
     var timeNum = localStorage.getItem(i);
     var textInput = $("#" + i);
